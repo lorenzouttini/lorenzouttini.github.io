@@ -5,87 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .project {
-            background: #ddd;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            width: 250px;
-            text-align: center;
-        }
-        .project a {
-            text-decoration: none;
-            color: #333;
-        }
-        footer {
-            margin-top: 20px;
-            padding: 10px;
-            background: #333;
-            color: white;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; height: 100vh; background-color: #f4f4f4; }
+        
+        /* Sidebar */
+        .sidebar { width: 250px; background: #333; color: white; padding: 20px; position: fixed; height: 100%; }
+        .sidebar h1 { font-size: 24px; margin-bottom: 10px; }
+        .sidebar p { font-size: 14px; margin-bottom: 20px; }
+        .sidebar a { color: #ddd; text-decoration: none; display: block; margin-bottom: 10px; }
+        .sidebar a:hover { color: white; }
+        
+        /* Main Content */
+        .main { margin-left: 250px; flex: 1; padding: 20px; }
+        .nav { display: flex; gap: 20px; background: white; padding: 10px; position: sticky; top: 0; border-bottom: 1px solid #ccc; }
+        .nav a { text-decoration: none; color: #333; font-weight: bold; }
+        .nav a:hover { color: #007BFF; }
+        
+        /* Sections */
+        .section { padding: 40px 0; border-bottom: 1px solid #ddd; }
+        .section:last-child { border-bottom: none; }
+        h2 { color: #333; }
     </style>
 </head>
 <body>
-
-    <header>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
         <h1>Your Name</h1>
         <p>Software Developer | Open Source Enthusiast</p>
-    </header>
-
-    <div class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer working on web and software projects. Check out some of my work below.</p>
-
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>A cool project description.</p>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Another awesome project.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="mailto:your.email@example.com">Email</a>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Your Name - All rights reserved.</p>
-    </footer>
-
+    
+    <!-- Main Content -->
+    <div class="main">
+        
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#scholarship">Scholarship</a>
+        </div>
+        
+        <!-- Sections -->
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate developer working on web and software projects...</p>
+        </div>
+        
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <p>Here you can list your professional experience.</p>
+        </div>
+        
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Details about your projects and links to GitHub.</p>
+        </div>
+        
+        <div id="scholarship" class="section">
+            <h2>Scholarship</h2>
+            <p>Any relevant academic achievements, grants, or awards.</p>
+        </div>
+    </div>
+    
 </body>
 </html>
+
 
 
