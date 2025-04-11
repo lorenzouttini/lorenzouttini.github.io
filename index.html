@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
         body { display: flex; height: 100vh; background-color: #f4f4f4; }
         
         /* Sidebar */
-        .sidebar { width: 250px; background: #333; color: white; padding: 20px; position: fixed; height: 100%; }
+        .sidebar { width: 350px; background: #333; color: white; padding: 20px; position: fixed; height: 100%; }
         .sidebar h1 { font-size: 24px; margin-bottom: 10px; }
         .sidebar p { font-size: 14px; margin-bottom: 20px; }
         .sidebar a { color: #ddd; text-decoration: none; display: block; margin-bottom: 10px; }
         .sidebar a:hover { color: white; }
         
         /* Main Content */
-        .main { margin-left: 250px; flex: 1; padding: 20px; }
+        .main { margin-left: 350px; flex: 1; padding: 20px; }
         .nav { display: flex; gap: 20px; background: white; padding: 10px; position: sticky; top: 0; border-bottom: 1px solid #ccc; }
         .nav a { text-decoration: none; color: #333; font-weight: bold; }
         .nav a:hover { color: #007BFF; }
@@ -31,13 +33,25 @@
     
     <!-- Sidebar -->
     <div class="sidebar">
-        <img src="Photo ID.JPEG" alt="Your Photo" style="width:100%; border-radius:40%; margin-bottom:15px;">
-        <h1>Lorenzo Uttini</h1>
-        <p>MSc Research Student at UCL</p>
-        <p>Appassionate about ML and Robotics</p>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/lorenzouttini" target="_blank">GitHub</a>
-        <a href="uttini.lorenzo@gmail.com">Email</a>
+        <img src="photo_self.JPG" alt="Your Photo" style="width:60%; border-radius:30%; margin-bottom:15px; margin-left:20px;">
+        <h1 style="margin-left:20px">Lorenzo Uttini</h1>
+        <p style="margin-left:20px"><em>MSc Research Student at UCL</em></p>
+        
+        <p style="margin-left:20px; margin-bottom: 11px;">
+            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>London, UK
+        </p>
+        <a style="margin-left:20px" href="mailto:uttini.lorenzo@gmail.com">
+            <i class="fas fa-envelope" style="margin-right: 8px;"></i>Email
+        </a>
+        <a style="margin-left:20px" href="CV_LorenzoUttini.pdf" target="_blank">
+            <i class="fas fa-file-alt" style="margin-right: 8px;"></i>Resume
+        </a>
+        <a style="margin-left:20px" href="www.linkedin.com/in/lorenzo-uttini" target="_blank">
+            <i class="fab fa-linkedin" style="margin-right: 8px;"></i>LinkedIn
+        </a>
+        <a style="margin-left:20px" href="https://github.com/lorenzouttini" target="_blank">
+            <i class="fab fa-github" style="margin-right: 8px;"></i>GitHub
+        </a>
     </div>
     
     <!-- Main Content -->
@@ -53,35 +67,132 @@
         <!-- Sections -->
         <div id="about" class="section">
             <h2>About Me</h2>
-            <p>Hello! I'm attending a master in Robotics and Artificial Intelligence at UCL. I am working as research assistant at Robotics and</p>
-            <p> </p>
+            <p style="margin-top: 20px; margin-right: 200px;">
+                Hello! I'm currently pursuing a Master's in Robotics and Artificial Intelligence at <a href="https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/robotics-and-artificial-intelligence-msc" target="_blank" style="color: #606060;"> UCL</a>. 
+                As part of my studies, I'm working as a research intern on a project focused on developing reinforcement learning policies for the <a href="https://www.pal-robotics.com/robots/kangaroo/" target="_blank" style="color: #606060;">Kangaroo robot</a>, 
+                supervised by Prof. Valerio Modugno in collaboration with <a href="https://www.pal-robotics.com/" target="_blank" style="color: #606060;">PAL Robotics</a>.
+            </p>
+            <p style="margin-top: 20px; margin-right: 200px;">
+                When I’m not working, you’ll often find me out running, travelling, or diving into books about history and technology. I value balance between focused research and staying active, 
+                and I’m always curious to learn something new.
+            </p>
         </div>
         
         <div id="experience" class="section">
             <h2>Experience</h2>
-            <p>Here you can list your professional experience.</p>
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <img src="kangaroo.png" alt="Kanagaroo" style="width: 180px; height: 180px; margin-right: 20px; border-radius: 10px;">
+                
+                <div>
+                    <h3 style="margin-top: 20px; margin-bottom: 8px; margin-right: 300px;">Graduate Researcher - UCL</h3>
+                    <p style="color: #888; font-size: 15px; margin-bottom: 15px;"> <em>December 2024 – Present</em></p>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;">
+                        Supervised by Prof. Valerio Modugno, I am currently contributing to the development of sophisticated walking policies and complex behaviors for the Kangaroo robot by PAL Robotics, leveraging <strong>Reinforcement Learning</strong>  techniques.</p>
+                    <p style="margin-bottom: 12px; margin-right: 270px; text-align: justify;">
+                        The robot is trained in Isaac Lab and successfully transferred the learned policies to MuJoCo, demonstrating effective <strong>sim-to-sim</strong> deployment. 
+                        This work explores the challenges of closed-chain kinematic structures and highlights the feasibility of cross-simulator generalization. 
+                    A research paper is currently in progress, and the codebase is under active development.</p>
+                    <!-- <a href="paper.pdf" target="_blank">[paper]</a> -->
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <img src="cy4gate.png" alt="Kanagaroo" style="width: 160px; height: 110px; margin-right: 40px; margin-left: 30px; border-radius: 10px;">
+                
+                <div>
+                    <h3 style="margin-top: 20px; margin-bottom: 8px; margin-right: 300px;">Machine Learning Engineer Intern - Cy4gate</h3>
+                    <p style="color: #888; font-size: 15px; margin-bottom: 15px;"><em>February 2024 – May 2024</em></p>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;">
+                        During my internship at Cy4gate, an Italian cybersecurity and cyberintelligence company, I developed <strong>Machine Learning Models</strong> to detect malicious domains generated by Domain Generation Algorithms (<strong>DGAs</strong>), 
+                        employing Keras for model design.</p>
+                    <p style="margin-bottom: 12px; margin-right: 270px; text-align: justify;">   
+                        I processed and analyzed over 200,000 domain samples from internal logs and public datasets using Scikit-Learn for feature engineering, integrating into a Streamlit-based web application. </p>
+                    <!-- <a href="paper.pdf" target="_blank">[paper]</a> -->
+                </div>
+            </div>
         </div>
         
         <div id="projects" class="section">
-            <h2>Projects</h2>
+            <h2 style="margin-bottom: 30px;">Projects</h2>
         
-            <div style="display: flex; align-items: center; margin-bottom: 20px; margin-right: 50px">
-                <img src="transformer.png" alt="Transformer Model" style="width: 200px; height: 250px; margin-right: 20px; border-radius: 10px;">
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <img src="transformer.png" alt="Transformer Model" style="width: 180px; height: 230px; margin-right: 35px; border-radius: 10px;">
                 
                 <div>
-                    <h3>Detection of DGA Domains by Exploring Different Machine Learning Approaches</h3>
-                    <p>Developed and evaluated various machine learning models to detect malicious website domains generated by Domain Generation Algorithms (DGAs) using Keras. 
-                    Processed over 200,000 domains from built-in logs and external databases, leveraging Scikit-Learn for feature extraction. 
-                    Designed and deployed an interactive web application using Streamlit, making the best-performing model accessible for industrial applications.</p>
-        
-                    <a href="thesis.pdf" target="_blank">[thesis]</a>
+                    <h3 style="margin-bottom: 20px; margin-right: 300px;">Detection of DGA Domains by Exploring Different Machine Learning Approaches</h3>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;">
+                        Developed and evaluated various machine learning models to detect malicious website domains generated by Domain Generation Algorithms (<strong>DGAs</strong>) using Keras. </p>
+                    <p style="margin-bottom: 12px; margin-right: 270px; text-align: justify;">
+                        Processed over 200,000 domains from built-in logs and external databases, leveraging Scikit-Learn for feature extraction. 
+                        Designed and deployed an <strong>interactive web application</strong> using Streamlit, making the best-performing model accessible for industrial applications.</p>
+                    <a href="thesis.pdf" target="_blank" style="color: #666;">[thesis]</a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 20px; margin-top: 40px;">
+                <img src="depth_image2.png" alt="Depth Image" style="width: 180px; height: 180px; margin-right: 35px; border-radius: 10px;">
+                
+                <div>
+                    <h3 style="margin-top: 20px; margin-bottom: 20px; margin-right: 300px;">3D Point Cloud Table Detection and Segmentation</h3>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;">
+                        Designed and evaluated multiple pipelines for detecting and segmenting tables in indoor environments using <strong>3D point cloud data</strong>. 
+                        Built a depth-based classification system using DGCNN on real and synthetic datasets, and implemented a monocular depth estimation approach (ZoeDepth) to extend functionality to RGB-only inputs. </p>
+                    <p style="margin-bottom: 12px; margin-right: 270px; text-align: justify;">
+                        Developed both <strong>binary classification</strong> and <strong>per-point segmentation</strong> models, tested across SUN3D and RealSense datasets. Employed evaluation metrics including accuracy, F1-score, and depth error analysis. 
+                        Visualized predictions and model performance to assess generalization to real-world scenes.</p>
+                    <a href="3d_object_detection.pdf" target="_blank" style="color: #666;">[report]</a>
+                    <a href="https://github.com/lorenzouttini/cw2-classification-tables.git" target="_blank" style="margin-left: 10px; color: #666;">[code]</a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 20px; margin-top: 40px;">
+                <img src="car_pybullet.jpg" alt="Car" style="width: 180px; height: 180px; margin-right: 47px; border-radius: 10px;">
+                
+                <div>
+                    <h3 style="margin-top: 20px; margin-bottom: 20px; margin-right: 300px;">EKF-MPC Robot Navigation</h3>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;"> 
+                        Developed a unified navigation system for autonomous wheeled robots by integrating Extended Kalman Filter (<strong>EKF</strong>) for localization and
+                        Model Predictive Control (<strong>MPC</strong>) for trajectory tracking.</p>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;">
+                        Implemented EKF to estimate the robot’s pose using range and bearing measurements from known landmarks, and employed MPC to optimize control inputs. 
+                        Evaluated system <strong>performance through simulation</strong> (PyBullet), comparing trajectories with and without EKF integration, and demonstrated improved accuracy, stability, and noise resilience.</p>
+                    <a href="autonomous_ekf.pdf" target="_blank" style="color: #666;">[report]</a>
+                    <a href="https://github.com/lorenzouttini/ekf-mpc-robot-navigation.git" target="_blank" style="margin-left: 10px; color: #666;">[code]</a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 20px; margin-top: 40px;">
+                <img src="manipulator.png" alt="Manipulator" style="width: 180px; height: 180px; margin-right: 35px; border-radius: 10px;">
+                
+                <div>
+                    <h3 style="margin-top: 20px; margin-bottom: 20px; margin-right: 300px;">Tic-Tac-Toe Shape Detection and Pick & Place Manipulation</h3>
+                    <p style="margin-bottom: 6px; margin-right: 270px; text-align: justify;"> 
+                        Designed and implemented a multi-stage pipeline for a Franka Emika Panda robot arm to autonomously detect, classify, and manipulate Tic-Tac-Toe-like shapes. 
+                        The project was structured around three tasks: accurate <strong>pick-and-place</strong> of shapes using grasping strategies, robust <strong>classification</strong> on variable-height tables, and <strong>identifying and manipulating</strong> the most frequent shape. </p>
+                    <p style="margin-bottom: 12px; margin-right: 270px; text-align: justify;"> 
+                        Integrated ROS with PCL for point cloud processing, OpenCV for shape recognition, and MoveIt for motion planning. The solution included dynamic height detection, orientation estimation, and error recovery mechanisms. 
+                    </p>
+                    <a href="https://github.com/lorenzouttini/robot-arm-classification-detection.git" target="_blank" style="margin-left: 1px; color: #666;">[code]</a>
                 </div>
             </div>
         </div>
         
         <div id="scholarship" class="section">
             <h2>Scholarship</h2>
-            <p>Any relevant academic achievements, grants, or awards.</p>
+            <p style="margin-top: 20px; margin-right: 180px;">
+                <strong>Unipv Scholarship:</strong> Classified third among 300+ students to obtain a merit scholarship of $5000 to study one
+                semester in San Francisco awarded by University of Pavia.
+            </p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="section" style="text-align: center;">
+            <p style="font-size: 14px; color: #666;">
+            Thanks for visiting! I'm always open to collaborations or new opportunities — feel free to reach out.
+            </p>
+        <hr style="margin: 20px auto; width: 60%; border: none; border-top: 1px solid #ccc;">
+            <p style="font-size: 13px; color: #999;">
+            © 2025 Lorenzo Uttini. All rights reserved.
+            </p>
         </div>
     </div>
     
